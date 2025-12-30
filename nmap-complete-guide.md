@@ -1203,7 +1203,7 @@ nmap -sV --script=vuln -T4 kavisnetwork.in
 
 **Author:** Security Guide  
 **Target Domain:** kavisnetwork.in  
-**Last Updated:** December 2024
+**Last Updated:** December 30, 2025
 
 ---
 
