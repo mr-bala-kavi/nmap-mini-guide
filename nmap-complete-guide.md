@@ -1,6 +1,6 @@
 # 🔍 Nmap - Complete Guide (Basic to Advanced)
 
-> **Target Domain for Examples:** `kavisnetwork.in`
+> **Target Domain for Examples:** `example.com`
 
 ---
 
@@ -91,7 +91,7 @@ nmap --version
 Scans the most common 1000 ports on the target.
 
 ```bash
-nmap kavisnetwork.in
+nmap example.com
 ```
 **Output:** List of open ports, their states, and services.
 
@@ -101,19 +101,19 @@ nmap kavisnetwork.in
 
 ```bash
 # Single port
-nmap -p 80 kavisnetwork.in
+nmap -p 80 example.com
 
 # Multiple ports
-nmap -p 80,443,22,21 kavisnetwork.in
+nmap -p 80,443,22,21 example.com
 
 # Port range
-nmap -p 1-1000 kavisnetwork.in
+nmap -p 1-1000 example.com
 
 # All 65535 ports
-nmap -p- kavisnetwork.in
+nmap -p- example.com
 
 # Top ports
-nmap --top-ports 100 kavisnetwork.in
+nmap --top-ports 100 example.com
 ```
 
 ---
@@ -145,7 +145,7 @@ nmap 192.168.1.0/24 --exclude 192.168.1.1
 **Most popular scan type.** Sends SYN packets and analyzes responses.
 
 ```bash
-nmap -sS kavisnetwork.in
+nmap -sS example.com
 ```
 
 | Response | Port State |
@@ -165,7 +165,7 @@ nmap -sS kavisnetwork.in
 Completes the full TCP three-way handshake.
 
 ```bash
-nmap -sT kavisnetwork.in
+nmap -sT example.com
 ```
 
 **Why use it?**
@@ -179,10 +179,10 @@ nmap -sT kavisnetwork.in
 Scans UDP ports (DNS, DHCP, SNMP, etc.)
 
 ```bash
-nmap -sU kavisnetwork.in
+nmap -sU example.com
 
 # Common UDP ports
-nmap -sU -p 53,67,68,69,123,161,162 kavisnetwork.in
+nmap -sU -p 53,67,68,69,123,161,162 example.com
 ```
 
 **Why use it?**
@@ -196,7 +196,7 @@ nmap -sU -p 53,67,68,69,123,161,162 kavisnetwork.in
 Sends packets with no flags set.
 
 ```bash
-nmap -sN kavisnetwork.in
+nmap -sN example.com
 ```
 
 **Why use it?**
@@ -209,7 +209,7 @@ nmap -sN kavisnetwork.in
 Sends packets with only FIN flag.
 
 ```bash
-nmap -sF kavisnetwork.in
+nmap -sF example.com
 ```
 
 **Why use it?**
@@ -222,7 +222,7 @@ nmap -sF kavisnetwork.in
 Sends packets with FIN, PSH, and URG flags (like a Christmas tree).
 
 ```bash
-nmap -sX kavisnetwork.in
+nmap -sX example.com
 ```
 
 **Why use it?**
@@ -235,7 +235,7 @@ nmap -sX kavisnetwork.in
 Sends ACK packets to determine firewall rules.
 
 ```bash
-nmap -sA kavisnetwork.in
+nmap -sA example.com
 ```
 
 **Why use it?**
@@ -248,7 +248,7 @@ nmap -sA kavisnetwork.in
 Similar to ACK scan but examines TCP window field.
 
 ```bash
-nmap -sW kavisnetwork.in
+nmap -sW example.com
 ```
 
 ---
@@ -257,7 +257,7 @@ nmap -sW kavisnetwork.in
 Sends FIN/ACK probe.
 
 ```bash
-nmap -sM kavisnetwork.in
+nmap -sM example.com
 ```
 
 ---
@@ -266,7 +266,7 @@ nmap -sM kavisnetwork.in
 For SCTP protocol (used in telecommunications).
 
 ```bash
-nmap -sY kavisnetwork.in
+nmap -sY example.com
 ```
 
 ---
@@ -274,7 +274,7 @@ nmap -sY kavisnetwork.in
 ### 11. SCTP COOKIE-ECHO Scan
 
 ```bash
-nmap -sZ kavisnetwork.in
+nmap -sZ example.com
 ```
 
 ---
@@ -283,7 +283,7 @@ nmap -sZ kavisnetwork.in
 Determines which IP protocols are supported.
 
 ```bash
-nmap -sO kavisnetwork.in
+nmap -sO example.com
 ```
 
 ---
@@ -292,7 +292,7 @@ nmap -sO kavisnetwork.in
 Uses a zombie host to scan the target anonymously.
 
 ```bash
-nmap -sI zombie_host kavisnetwork.in
+nmap -sI zombie_host example.com
 ```
 
 **Why use it?**
@@ -307,7 +307,7 @@ nmap -sI zombie_host kavisnetwork.in
 Only discovers live hosts.
 
 ```bash
-nmap -sn kavisnetwork.in
+nmap -sn example.com
 nmap -sn 192.168.1.0/24
 ```
 
@@ -317,7 +317,7 @@ nmap -sn 192.168.1.0/24
 Treats all hosts as online.
 
 ```bash
-nmap -Pn kavisnetwork.in
+nmap -Pn example.com
 ```
 
 **Why use it?**
@@ -329,7 +329,7 @@ nmap -Pn kavisnetwork.in
 ### 3. TCP SYN Ping
 
 ```bash
-nmap -PS22,80,443 kavisnetwork.in
+nmap -PS22,80,443 example.com
 ```
 
 ---
@@ -337,7 +337,7 @@ nmap -PS22,80,443 kavisnetwork.in
 ### 4. TCP ACK Ping
 
 ```bash
-nmap -PA22,80,443 kavisnetwork.in
+nmap -PA22,80,443 example.com
 ```
 
 ---
@@ -345,7 +345,7 @@ nmap -PA22,80,443 kavisnetwork.in
 ### 5. UDP Ping
 
 ```bash
-nmap -PU53,161 kavisnetwork.in
+nmap -PU53,161 example.com
 ```
 
 ---
@@ -353,7 +353,7 @@ nmap -PU53,161 kavisnetwork.in
 ### 6. ICMP Echo Ping
 
 ```bash
-nmap -PE kavisnetwork.in
+nmap -PE example.com
 ```
 
 ---
@@ -361,7 +361,7 @@ nmap -PE kavisnetwork.in
 ### 7. ICMP Timestamp Ping
 
 ```bash
-nmap -PP kavisnetwork.in
+nmap -PP example.com
 ```
 
 ---
@@ -369,7 +369,7 @@ nmap -PP kavisnetwork.in
 ### 8. ICMP Address Mask Ping
 
 ```bash
-nmap -PM kavisnetwork.in
+nmap -PM example.com
 ```
 
 ---
@@ -385,7 +385,7 @@ nmap -PR 192.168.1.0/24
 ### 10. Traceroute
 
 ```bash
-nmap --traceroute kavisnetwork.in
+nmap --traceroute example.com
 ```
 
 ---
@@ -395,7 +395,7 @@ nmap --traceroute kavisnetwork.in
 ### 1. Service Version Detection
 
 ```bash
-nmap -sV kavisnetwork.in
+nmap -sV example.com
 ```
 
 **What you get:**
@@ -408,7 +408,7 @@ nmap -sV kavisnetwork.in
 ### 2. Aggressive Version Detection
 
 ```bash
-nmap -sV --version-intensity 5 kavisnetwork.in
+nmap -sV --version-intensity 5 example.com
 ```
 
 **Intensity levels:** 0-9 (higher = more probes, more accurate)
@@ -418,7 +418,7 @@ nmap -sV --version-intensity 5 kavisnetwork.in
 ### 3. Light Version Detection
 
 ```bash
-nmap -sV --version-light kavisnetwork.in
+nmap -sV --version-light example.com
 ```
 
 ---
@@ -426,7 +426,7 @@ nmap -sV --version-light kavisnetwork.in
 ### 4. All Version Detection
 
 ```bash
-nmap -sV --version-all kavisnetwork.in
+nmap -sV --version-all example.com
 ```
 
 ---
@@ -434,7 +434,7 @@ nmap -sV --version-all kavisnetwork.in
 ### 5. Banner Grabbing with Scripts
 
 ```bash
-nmap -sV --script=banner kavisnetwork.in
+nmap -sV --script=banner example.com
 ```
 
 ---
@@ -444,7 +444,7 @@ nmap -sV --script=banner kavisnetwork.in
 ### 1. Enable OS Detection
 
 ```bash
-nmap -O kavisnetwork.in
+nmap -O example.com
 ```
 
 **What you get:**
@@ -457,7 +457,7 @@ nmap -O kavisnetwork.in
 ### 2. Aggressive OS Detection
 
 ```bash
-nmap -O --osscan-guess kavisnetwork.in
+nmap -O --osscan-guess example.com
 ```
 
 ---
@@ -465,7 +465,7 @@ nmap -O --osscan-guess kavisnetwork.in
 ### 3. Limit OS Detection
 
 ```bash
-nmap -O --osscan-limit kavisnetwork.in
+nmap -O --osscan-limit example.com
 ```
 
 ---
@@ -474,7 +474,7 @@ nmap -O --osscan-limit kavisnetwork.in
 
 ```bash
 # OS + Version + Scripts + Traceroute
-nmap -A kavisnetwork.in
+nmap -A example.com
 ```
 
 ---
@@ -507,9 +507,9 @@ NSE allows you to write and run scripts for various tasks.
 ### 1. Default Scripts
 
 ```bash
-nmap -sC kavisnetwork.in
+nmap -sC example.com
 # Or
-nmap --script=default kavisnetwork.in
+nmap --script=default example.com
 ```
 
 ---
@@ -517,9 +517,9 @@ nmap --script=default kavisnetwork.in
 ### 2. Specific Script
 
 ```bash
-nmap --script=http-title kavisnetwork.in
-nmap --script=ssh-brute kavisnetwork.in
-nmap --script=ssl-cert kavisnetwork.in
+nmap --script=http-title example.com
+nmap --script=ssh-brute example.com
+nmap --script=ssl-cert example.com
 ```
 
 ---
@@ -527,7 +527,7 @@ nmap --script=ssl-cert kavisnetwork.in
 ### 3. Multiple Scripts
 
 ```bash
-nmap --script=http-title,http-headers,http-methods kavisnetwork.in
+nmap --script=http-title,http-headers,http-methods example.com
 ```
 
 ---
@@ -535,9 +535,9 @@ nmap --script=http-title,http-headers,http-methods kavisnetwork.in
 ### 4. Script Category
 
 ```bash
-nmap --script=vuln kavisnetwork.in
-nmap --script=discovery kavisnetwork.in
-nmap --script=safe kavisnetwork.in
+nmap --script=vuln example.com
+nmap --script=discovery example.com
+nmap --script=safe example.com
 ```
 
 ---
@@ -545,8 +545,8 @@ nmap --script=safe kavisnetwork.in
 ### 5. Wildcard Scripts
 
 ```bash
-nmap --script="http-*" kavisnetwork.in
-nmap --script="ssh-*" kavisnetwork.in
+nmap --script="http-*" example.com
+nmap --script="ssh-*" example.com
 ```
 
 ---
@@ -554,7 +554,7 @@ nmap --script="ssh-*" kavisnetwork.in
 ### 6. Script Arguments
 
 ```bash
-nmap --script=http-brute --script-args http-brute.path=/admin kavisnetwork.in
+nmap --script=http-brute --script-args http-brute.path=/admin example.com
 ```
 
 ---
@@ -580,19 +580,19 @@ nmap --script-help="http-*"
 
 ```bash
 # HTTP enumeration
-nmap --script=http-enum kavisnetwork.in
+nmap --script=http-enum example.com
 
 # SSL/TLS vulnerabilities
-nmap --script=ssl-enum-ciphers -p 443 kavisnetwork.in
+nmap --script=ssl-enum-ciphers -p 443 example.com
 
 # HTTP headers
-nmap --script=http-headers kavisnetwork.in
+nmap --script=http-headers example.com
 
 # HTTP methods
-nmap --script=http-methods kavisnetwork.in
+nmap --script=http-methods example.com
 
 # DNS enumeration
-nmap --script=dns-brute kavisnetwork.in
+nmap --script=dns-brute example.com
 
 # SMB vulnerabilities
 nmap --script=smb-vuln* -p 445 target
@@ -604,7 +604,7 @@ nmap --script=mysql-info -p 3306 target
 nmap --script=ftp-anon -p 21 target
 
 # SSH authentication methods
-nmap --script=ssh-auth-methods -p 22 kavisnetwork.in
+nmap --script=ssh-auth-methods -p 22 example.com
 ```
 
 ---
@@ -624,9 +624,9 @@ nmap --script=ssh-auth-methods -p 22 kavisnetwork.in
 
 ```bash
 # Examples
-nmap -T0 kavisnetwork.in  # Paranoid
-nmap -T4 kavisnetwork.in  # Aggressive (recommended)
-nmap -T5 kavisnetwork.in  # Insane
+nmap -T0 example.com  # Paranoid
+nmap -T4 example.com  # Aggressive (recommended)
+nmap -T5 example.com  # Insane
 ```
 
 ---
@@ -635,22 +635,22 @@ nmap -T5 kavisnetwork.in  # Insane
 
 ```bash
 # Minimum packet rate
-nmap --min-rate 100 kavisnetwork.in
+nmap --min-rate 100 example.com
 
 # Maximum packet rate
-nmap --max-rate 1000 kavisnetwork.in
+nmap --max-rate 1000 example.com
 
 # Host timeout
-nmap --host-timeout 30m kavisnetwork.in
+nmap --host-timeout 30m example.com
 
 # Scan delay
-nmap --scan-delay 1s kavisnetwork.in
+nmap --scan-delay 1s example.com
 
 # Maximum retries
-nmap --max-retries 2 kavisnetwork.in
+nmap --max-retries 2 example.com
 
 # Parallel hosts
-nmap --min-hostgroup 64 kavisnetwork.in
+nmap --min-hostgroup 64 example.com
 ```
 
 ---
@@ -660,7 +660,7 @@ nmap --min-hostgroup 64 kavisnetwork.in
 ### 1. Normal Output
 
 ```bash
-nmap -oN output.txt kavisnetwork.in
+nmap -oN output.txt example.com
 ```
 
 ---
@@ -668,7 +668,7 @@ nmap -oN output.txt kavisnetwork.in
 ### 2. XML Output
 
 ```bash
-nmap -oX output.xml kavisnetwork.in
+nmap -oX output.xml example.com
 ```
 
 ---
@@ -676,7 +676,7 @@ nmap -oX output.xml kavisnetwork.in
 ### 3. Grepable Output
 
 ```bash
-nmap -oG output.gnmap kavisnetwork.in
+nmap -oG output.gnmap example.com
 ```
 
 ---
@@ -684,7 +684,7 @@ nmap -oG output.gnmap kavisnetwork.in
 ### 4. Script Kiddie Output
 
 ```bash
-nmap -oS output.txt kavisnetwork.in
+nmap -oS output.txt example.com
 ```
 
 ---
@@ -692,7 +692,7 @@ nmap -oS output.txt kavisnetwork.in
 ### 5. All Formats
 
 ```bash
-nmap -oA output_basename kavisnetwork.in
+nmap -oA output_basename example.com
 # Creates: output_basename.nmap, output_basename.xml, output_basename.gnmap
 ```
 
@@ -701,9 +701,9 @@ nmap -oA output_basename kavisnetwork.in
 ### 6. Verbose Output
 
 ```bash
-nmap -v kavisnetwork.in     # Verbose
-nmap -vv kavisnetwork.in    # Very verbose
-nmap -vvv kavisnetwork.in   # Extra verbose
+nmap -v example.com     # Verbose
+nmap -vv example.com    # Very verbose
+nmap -vvv example.com   # Extra verbose
 ```
 
 ---
@@ -711,8 +711,8 @@ nmap -vvv kavisnetwork.in   # Extra verbose
 ### 7. Debug Output
 
 ```bash
-nmap -d kavisnetwork.in     # Debug
-nmap -dd kavisnetwork.in    # More debug
+nmap -d example.com     # Debug
+nmap -dd example.com    # More debug
 ```
 
 ---
@@ -720,7 +720,7 @@ nmap -dd kavisnetwork.in    # More debug
 ### 8. Show Only Open Ports
 
 ```bash
-nmap --open kavisnetwork.in
+nmap --open example.com
 ```
 
 ---
@@ -728,7 +728,7 @@ nmap --open kavisnetwork.in
 ### 9. Reason for Port State
 
 ```bash
-nmap --reason kavisnetwork.in
+nmap --reason example.com
 ```
 
 ---
@@ -736,7 +736,7 @@ nmap --reason kavisnetwork.in
 ### 10. Packet Trace
 
 ```bash
-nmap --packet-trace kavisnetwork.in
+nmap --packet-trace example.com
 ```
 
 ---
@@ -746,8 +746,8 @@ nmap --packet-trace kavisnetwork.in
 ### 1. Fragment Packets
 
 ```bash
-nmap -f kavisnetwork.in
-nmap -f -f kavisnetwork.in  # Even smaller fragments
+nmap -f example.com
+nmap -f -f example.com  # Even smaller fragments
 ```
 
 ---
@@ -755,7 +755,7 @@ nmap -f -f kavisnetwork.in  # Even smaller fragments
 ### 2. Specify MTU
 
 ```bash
-nmap --mtu 16 kavisnetwork.in
+nmap --mtu 16 example.com
 ```
 
 ---
@@ -764,10 +764,10 @@ nmap --mtu 16 kavisnetwork.in
 
 ```bash
 # Use decoy IPs
-nmap -D decoy1,decoy2,ME kavisnetwork.in
+nmap -D decoy1,decoy2,ME example.com
 
 # Random decoys
-nmap -D RND:10 kavisnetwork.in
+nmap -D RND:10 example.com
 ```
 
 ---
@@ -775,7 +775,7 @@ nmap -D RND:10 kavisnetwork.in
 ### 4. Spoof Source IP
 
 ```bash
-nmap -S 192.168.1.100 kavisnetwork.in
+nmap -S 192.168.1.100 example.com
 ```
 
 ---
@@ -783,8 +783,8 @@ nmap -S 192.168.1.100 kavisnetwork.in
 ### 5. Spoof Source Port
 
 ```bash
-nmap --source-port 53 kavisnetwork.in
-nmap -g 80 kavisnetwork.in
+nmap --source-port 53 example.com
+nmap -g 80 example.com
 ```
 
 ---
@@ -792,7 +792,7 @@ nmap -g 80 kavisnetwork.in
 ### 6. Append Random Data
 
 ```bash
-nmap --data-length 25 kavisnetwork.in
+nmap --data-length 25 example.com
 ```
 
 ---
@@ -809,13 +809,13 @@ nmap --randomize-hosts 192.168.1.0/24
 
 ```bash
 # Random MAC
-nmap --spoof-mac 0 kavisnetwork.in
+nmap --spoof-mac 0 example.com
 
 # Specific vendor
-nmap --spoof-mac Apple kavisnetwork.in
+nmap --spoof-mac Apple example.com
 
 # Specific MAC
-nmap --spoof-mac 00:11:22:33:44:55 kavisnetwork.in
+nmap --spoof-mac 00:11:22:33:44:55 example.com
 ```
 
 ---
@@ -823,7 +823,7 @@ nmap --spoof-mac 00:11:22:33:44:55 kavisnetwork.in
 ### 9. Bad Checksum
 
 ```bash
-nmap --badsum kavisnetwork.in
+nmap --badsum example.com
 ```
 
 ---
@@ -831,7 +831,7 @@ nmap --badsum kavisnetwork.in
 ### 10. IPv6 Scanning
 
 ```bash
-nmap -6 kavisnetwork.in
+nmap -6 example.com
 ```
 
 ---
@@ -841,7 +841,7 @@ nmap -6 kavisnetwork.in
 ### 1. Comprehensive Scan
 
 ```bash
-nmap -A -T4 -p- kavisnetwork.in
+nmap -A -T4 -p- example.com
 ```
 
 **Includes:**
@@ -855,7 +855,7 @@ nmap -A -T4 -p- kavisnetwork.in
 ### 2. Aggressive Vulnerability Scan
 
 ```bash
-nmap -sS -sV -O --script=vuln -T4 kavisnetwork.in
+nmap -sS -sV -O --script=vuln -T4 example.com
 ```
 
 ---
@@ -863,7 +863,7 @@ nmap -sS -sV -O --script=vuln -T4 kavisnetwork.in
 ### 3. Web Application Scan
 
 ```bash
-nmap -p 80,443 --script=http-enum,http-vuln*,http-methods kavisnetwork.in
+nmap -p 80,443 --script=http-enum,http-vuln*,http-methods example.com
 ```
 
 ---
@@ -871,7 +871,7 @@ nmap -p 80,443 --script=http-enum,http-vuln*,http-methods kavisnetwork.in
 ### 4. SSL/TLS Analysis
 
 ```bash
-nmap --script=ssl-cert,ssl-enum-ciphers,ssl-known-key -p 443 kavisnetwork.in
+nmap --script=ssl-cert,ssl-enum-ciphers,ssl-known-key -p 443 example.com
 ```
 
 ---
@@ -879,7 +879,7 @@ nmap --script=ssl-cert,ssl-enum-ciphers,ssl-known-key -p 443 kavisnetwork.in
 ### 5. DNS Enumeration
 
 ```bash
-nmap --script=dns-brute,dns-zone-transfer -p 53 kavisnetwork.in
+nmap --script=dns-brute,dns-zone-transfer -p 53 example.com
 ```
 
 ---
@@ -887,7 +887,7 @@ nmap --script=dns-brute,dns-zone-transfer -p 53 kavisnetwork.in
 ### 6. Email Server Scan
 
 ```bash
-nmap -p 25,110,143,465,587,993,995 --script=smtp-*,pop3-*,imap-* kavisnetwork.in
+nmap -p 25,110,143,465,587,993,995 --script=smtp-*,pop3-*,imap-* example.com
 ```
 
 ---
@@ -911,7 +911,7 @@ nmap --script=smb-enum-shares,smb-enum-users -p 445 target
 ### 9. Heartbleed Detection
 
 ```bash
-nmap --script=ssl-heartbleed -p 443 kavisnetwork.in
+nmap --script=ssl-heartbleed -p 443 example.com
 ```
 
 ---
@@ -919,7 +919,7 @@ nmap --script=ssl-heartbleed -p 443 kavisnetwork.in
 ### 10. Custom Scan with Everything
 
 ```bash
-nmap -sS -sU -sV -O -A -T4 -p- --script="default,vuln" -oA full_scan kavisnetwork.in
+nmap -sS -sU -sV -O -A -T4 -p- --script="default,vuln" -oA full_scan example.com
 ```
 
 ---
@@ -929,7 +929,7 @@ nmap -sS -sU -sV -O -A -T4 -p- --script="default,vuln" -oA full_scan kavisnetwor
 ### 1. General Vulnerability Scan
 
 ```bash
-nmap --script=vuln kavisnetwork.in
+nmap --script=vuln example.com
 ```
 
 ---
@@ -937,7 +937,7 @@ nmap --script=vuln kavisnetwork.in
 ### 2. Safe Vulnerability Scan
 
 ```bash
-nmap --script="vuln and safe" kavisnetwork.in
+nmap --script="vuln and safe" example.com
 ```
 
 ---
@@ -946,13 +946,13 @@ nmap --script="vuln and safe" kavisnetwork.in
 
 ```bash
 # Shellshock
-nmap --script=http-shellshock --script-args uri=/cgi-bin/bin kavisnetwork.in
+nmap --script=http-shellshock --script-args uri=/cgi-bin/bin example.com
 
 # Heartbleed (SSL)
-nmap --script=ssl-heartbleed -p 443 kavisnetwork.in
+nmap --script=ssl-heartbleed -p 443 example.com
 
 # POODLE
-nmap --script=ssl-poodle -p 443 kavisnetwork.in
+nmap --script=ssl-poodle -p 443 example.com
 
 # MS17-010 (EternalBlue)
 nmap --script=smb-vuln-ms17-010 -p 445 target
@@ -961,10 +961,10 @@ nmap --script=smb-vuln-ms17-010 -p 445 target
 nmap --script=smb-vuln* -p 445 target
 
 # HTTP vulnerabilities
-nmap --script="http-vuln*" -p 80,443 kavisnetwork.in
+nmap --script="http-vuln*" -p 80,443 example.com
 
 # WordPress vulnerabilities
-nmap --script=http-wordpress-enum kavisnetwork.in
+nmap --script=http-wordpress-enum example.com
 ```
 
 ---
@@ -972,7 +972,7 @@ nmap --script=http-wordpress-enum kavisnetwork.in
 ### 4. CVE Checking
 
 ```bash
-nmap --script=vulscan,vulners kavisnetwork.in
+nmap --script=vulscan,vulners example.com
 ```
 
 > **Note:** You may need to install additional scripts for `vulscan` and `vulners`.
@@ -985,16 +985,16 @@ nmap --script=vulscan,vulners kavisnetwork.in
 
 | Scan Type | Command | Use Case |
 |-----------|---------|----------|
-| Basic scan | `nmap kavisnetwork.in` | Quick overview |
-| All ports | `nmap -p- kavisnetwork.in` | Full port coverage |
-| Service detection | `nmap -sV kavisnetwork.in` | Identify services |
-| OS detection | `nmap -O kavisnetwork.in` | Identify OS |
-| Aggressive | `nmap -A kavisnetwork.in` | Full information |
-| Fast scan | `nmap -T4 -F kavisnetwork.in` | Quick results |
-| Stealth scan | `nmap -sS kavisnetwork.in` | Avoid detection |
-| UDP scan | `nmap -sU kavisnetwork.in` | UDP services |
-| Vulnerability | `nmap --script=vuln kavisnetwork.in` | Find vulnerabilities |
-| No ping | `nmap -Pn kavisnetwork.in` | Skip host discovery |
+| Basic scan | `nmap example.com` | Quick overview |
+| All ports | `nmap -p- example.com` | Full port coverage |
+| Service detection | `nmap -sV example.com` | Identify services |
+| OS detection | `nmap -O example.com` | Identify OS |
+| Aggressive | `nmap -A example.com` | Full information |
+| Fast scan | `nmap -T4 -F example.com` | Quick results |
+| Stealth scan | `nmap -sS example.com` | Avoid detection |
+| UDP scan | `nmap -sU example.com` | UDP services |
+| Vulnerability | `nmap --script=vuln example.com` | Find vulnerabilities |
+| No ping | `nmap -Pn example.com` | Skip host discovery |
 
 ---
 
@@ -1003,41 +1003,41 @@ nmap --script=vulscan,vulners kavisnetwork.in
 #### Scenario 1: Initial Reconnaissance
 ```bash
 # First, discover live hosts
-nmap -sn kavisnetwork.in
+nmap -sn example.com
 
 # Quick scan of common ports
-nmap -T4 -F kavisnetwork.in
+nmap -T4 -F example.com
 
 # Detailed scan of interesting targets
-nmap -sV -sC -O -T4 kavisnetwork.in
+nmap -sV -sC -O -T4 example.com
 ```
 
 ---
 
 #### Scenario 2: Web Server Assessment
 ```bash
-nmap -p 80,443,8080,8443 -sV --script=http-enum,http-headers,http-methods,http-vuln* kavisnetwork.in -oA web_scan
+nmap -p 80,443,8080,8443 -sV --script=http-enum,http-headers,http-methods,http-vuln* example.com -oA web_scan
 ```
 
 ---
 
 #### Scenario 3: Full Network Audit
 ```bash
-nmap -sS -sU -sV -O -A -T4 --top-ports 1000 --script="default,vuln" -oA network_audit kavisnetwork.in
+nmap -sS -sU -sV -O -A -T4 --top-ports 1000 --script="default,vuln" -oA network_audit example.com
 ```
 
 ---
 
 #### Scenario 4: Stealthy Reconnaissance
 ```bash
-nmap -sS -T2 -f --data-length 50 -D RND:5 --randomize-hosts kavisnetwork.in
+nmap -sS -T2 -f --data-length 50 -D RND:5 --randomize-hosts example.com
 ```
 
 ---
 
 #### Scenario 5: SSL/TLS Security Check
 ```bash
-nmap -p 443 --script=ssl-enum-ciphers,ssl-cert,ssl-known-key,ssl-heartbleed kavisnetwork.in
+nmap -p 443 --script=ssl-enum-ciphers,ssl-cert,ssl-known-key,ssl-heartbleed example.com
 ```
 
 ---
@@ -1050,114 +1050,114 @@ nmap -p 443 --script=ssl-enum-ciphers,ssl-cert,ssl-known-key,ssl-heartbleed kavi
 # ============================================
 
 # Default scan
-nmap kavisnetwork.in
+nmap example.com
 
 # Scan specific ports
-nmap -p 22,80,443 kavisnetwork.in
+nmap -p 22,80,443 example.com
 
 # Scan all ports
-nmap -p- kavisnetwork.in
+nmap -p- example.com
 
 # Fast scan (top 100 ports)
-nmap -F kavisnetwork.in
+nmap -F example.com
 
 # ============================================
 # DISCOVERY
 # ============================================
 
 # Ping scan only
-nmap -sn kavisnetwork.in
+nmap -sn example.com
 
 # No ping (skip discovery)
-nmap -Pn kavisnetwork.in
+nmap -Pn example.com
 
 # ============================================
 # SCAN TYPES
 # ============================================
 
 # SYN scan (stealth)
-nmap -sS kavisnetwork.in
+nmap -sS example.com
 
 # TCP connect scan
-nmap -sT kavisnetwork.in
+nmap -sT example.com
 
 # UDP scan
-nmap -sU kavisnetwork.in
+nmap -sU example.com
 
 # ============================================
 # DETECTION
 # ============================================
 
 # Version detection
-nmap -sV kavisnetwork.in
+nmap -sV example.com
 
 # OS detection
-nmap -O kavisnetwork.in
+nmap -O example.com
 
 # Aggressive scan (OS + versions + scripts + traceroute)
-nmap -A kavisnetwork.in
+nmap -A example.com
 
 # ============================================
 # SCRIPTS
 # ============================================
 
 # Default scripts
-nmap -sC kavisnetwork.in
+nmap -sC example.com
 
 # Vulnerability scripts
-nmap --script=vuln kavisnetwork.in
+nmap --script=vuln example.com
 
 # Specific scripts
-nmap --script=http-title,http-headers kavisnetwork.in
+nmap --script=http-title,http-headers example.com
 
 # ============================================
 # TIMING
 # ============================================
 
 # Fast timing
-nmap -T4 kavisnetwork.in
+nmap -T4 example.com
 
 # Slow/stealth timing
-nmap -T1 kavisnetwork.in
+nmap -T1 example.com
 
 # ============================================
 # OUTPUT
 # ============================================
 
 # Save all formats
-nmap -oA results kavisnetwork.in
+nmap -oA results example.com
 
 # Verbose output
-nmap -v kavisnetwork.in
+nmap -v example.com
 
 # Show only open ports
-nmap --open kavisnetwork.in
+nmap --open example.com
 
 # ============================================
 # EVASION
 # ============================================
 
 # Fragment packets
-nmap -f kavisnetwork.in
+nmap -f example.com
 
 # Use decoys
-nmap -D RND:5 kavisnetwork.in
+nmap -D RND:5 example.com
 
 # Random MAC
-nmap --spoof-mac 0 kavisnetwork.in
+nmap --spoof-mac 0 example.com
 
 # ============================================
 # COMBINED COMMANDS
 # ============================================
 
 # Comprehensive scan
-nmap -sS -sV -sC -O -T4 -p- -oA full_scan kavisnetwork.in
+nmap -sS -sV -sC -O -T4 -p- -oA full_scan example.com
 
 # Web focused
-nmap -p 80,443 -sV --script="http-*" kavisnetwork.in
+nmap -p 80,443 -sV --script="http-*" example.com
 
 # Vulnerability assessment
-nmap -sV --script=vuln -T4 kavisnetwork.in
+nmap -sV --script=vuln -T4 example.com
 ```
 
 ---
@@ -1202,7 +1202,7 @@ nmap -sV --script=vuln -T4 kavisnetwork.in
 ---
 
 **Author:** Security Guide  
-**Target Domain:** kavisnetwork.in  
+**Target Domain:** example.com  
 **Last Updated:** December 30, 2025
 
 ---
